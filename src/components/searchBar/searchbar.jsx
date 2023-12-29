@@ -11,7 +11,7 @@ import LatestTrends from '../latestTrends/latestTrends'; // Import the LatestTre
 import TrendsData from "../../data/LatestTrends.json";
 
 
-export default function SearchBar({ handleSearchInputChange, handleSearchIconClick }) {
+export default function SearchBar({ handleSearchInputChange, handleSearchIconClick,filterProductsByTrend }) {
   const [searchText, setSearchText] = useState('');
   const [debounceTimeout, setDebounceTimeout] = useState(0);
   const [latestTrends, setLatestTrends] = useState([]);
@@ -44,7 +44,7 @@ export default function SearchBar({ handleSearchInputChange, handleSearchIconCli
   };
 
   const handleCardClick = (trend) => {
-    handleSearchInputChange(trend.title)
+    filterProductsByTrend(trend.title);
     setDropdownOpen(false); // Close the dropdown after card click
   };
 

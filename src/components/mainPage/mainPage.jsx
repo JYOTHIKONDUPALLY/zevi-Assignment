@@ -54,7 +54,10 @@ export default function MainPage() {
     const numericRatings = updatedRatings.map((rating) => parseInt(rating));
     filterProducts(searchQuery, categoriesFilter, priceRangeFilter, numericRatings);
   };
-
+  const filterProductsByTrend = (trend) => {
+    const filtered = products.filter((product) => product.trend === trend);
+    setFilteredProducts(filtered);
+  };
   const filterProducts = (query, categories, priceRanges, ratings) => {
     console.log(query);
     const lowercaseQuery = query.toLowerCase();
@@ -70,15 +73,13 @@ export default function MainPage() {
         });
       const ratingMatches = ratings.length === 0 || !!ratings.find((rating) => rating === Math.round(product.rating));
       
-      const trendMatches = product.trend.toLowerCase().includes(lowercaseQuery);
 
       console.log("Title Matches:", titleMatches);
       console.log("Category Matches:", categoryMatches);
       console.log("Price Range Matches:", priceRangeMatches);
       console.log("Rating Matches:", ratingMatches);
-      console.log("Trend Matches:", trendMatches);
       
-      return titleMatches && categoryMatches && priceRangeMatches && ratingMatches && trendMatches;
+      return titleMatches && categoryMatches && priceRangeMatches && ratingMatches;
     });
   
     console.log(filtered);
@@ -101,7 +102,7 @@ export default function MainPage() {
 
   return (
     <div>
-      <SearchBar handleSearchInputChange={handleSearchInputChange} handleSearchIconClick={handleSearchIconClick}/>
+      <SearchBar handleSearchInputChange={handleSearchInputChange} handleSearchIconClick={handleSearchIconClick} filterProductsByTrend={filterProductsByTrend}/>
       <Grid container spacing={2} className={styles.container}>
         <Grid item xs={2}>
           <CheckBoxFilter
