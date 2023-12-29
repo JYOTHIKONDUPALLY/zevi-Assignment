@@ -73,12 +73,6 @@ export default function MainPage() {
         });
       const ratingMatches = ratings.length === 0 || !!ratings.find((rating) => rating === Math.round(product.rating));
       
-
-      console.log("Title Matches:", titleMatches);
-      console.log("Category Matches:", categoryMatches);
-      console.log("Price Range Matches:", priceRangeMatches);
-      console.log("Rating Matches:", ratingMatches);
-      
       return titleMatches && categoryMatches && priceRangeMatches && ratingMatches;
     });
   
