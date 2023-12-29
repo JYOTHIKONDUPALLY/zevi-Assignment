@@ -1,0 +1,19 @@
+
+
+.checkBoxFilterContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filterSection {
+  margin-bottom: 8px;
+  flex: 1; /* Make each filter section take equal width */
+
+  @media (min-width: 600px) {
+    /* Adjust styles for screens wider than 600px */
+    margin-right: 8px;
+    flex: none; /* Remove flex so each section takes its content's width */
+  }
+}
+
+/* Add more styles as needed */

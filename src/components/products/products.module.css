@@ -1,0 +1,11 @@
+/* products.module.css */
+
+.products {
+    justify-content: flex-end;
+  
+    @media (min-width: 600px) {
+      /* Adjust styles for screens wider than 600px */
+      justify-content: flex-start;
+    }
+  }
+  

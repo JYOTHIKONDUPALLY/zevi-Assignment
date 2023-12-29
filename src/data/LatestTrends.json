@@ -1,0 +1,22 @@
+[
+    {
+"id":1,
+"title":"Summer Trends",
+"image":"https://images.unsplash.com/photo-1617922001439-4a2e6562f328?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+        "id":2,
+        "title":"Cool outfits",
+        "image":"https://images.pexels.com/photos/2772535/pexels-photo-2772535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "id":3,
+        "title":"winter wear",
+        "image":"https://images.pexels.com/photos/1750776/pexels-photo-1750776.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        "id":4,
+        "title":"Office wear",
+        "image":"https://images.pexels.com/photos/12513869/pexels-photo-12513869.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    }
+]
