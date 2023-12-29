@@ -60,6 +60,7 @@ export default function SearchBar({ handleSearchInputChange, handleSearchIconCli
     }
   };
 
+  
   useEffect(() => {
     setLatestTrends(TrendsData);
   }, []);

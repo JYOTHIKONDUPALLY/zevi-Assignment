@@ -5,8 +5,14 @@
     margin-top: 30px;
     margin-left:auto;
     margin-right: auto;
+    display: flex;
 }
 
 .icon:hover{
 cursor: pointer;
+}
+
+.wishlist{
+    position: relative;
+    right:0px;
 }
